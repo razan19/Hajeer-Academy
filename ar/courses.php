@@ -161,14 +161,14 @@
 						<div class="topbar-left" dir="ltr">
 							<ul>
 								<li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
-								<li><a href="faq-1.html"><i class="fa fa-question-circle"></i>إسألنا </a></li>
+								<li><a href="contact.php"><i class="fa fa-question-circle"></i>إسألنا </a></li>
 							</ul>
 						</div>
 						<div class="topbar-right" dir="ltr">
 							<ul>
-								<li><a href="login.html">الدخول</a></li>
-								<li><a href="register.html">تسجيل</a></li>
-								<li><a href="../en/courses.html" class="header-lang-bx-ar">
+								<li><a href="../en/login.php">الدخول</a></li>
+								<li><a href="../en/login.php">تسجيل</a></li>
+								<li><a href="../en/courses.php" class="header-lang-bx-ar">
 										English<i class="flag flag-us"></i></a></li>
 							</ul>
 						</div>
@@ -181,7 +181,7 @@
 					<div class="container clearfix  align-m" dir="rtl">
 						<!-- Header Logo ==== -->
 						<div class="menu-logo-ar ">
-							<a href="index.html"><img src="../assets/images/logo-ar.png" alt=""></a>
+							<a href="index.php"><img src="../assets/images/logo-ar.png" alt=""></a>
 						</div>
 						<!-- Mobile Nav Button ==== -->
 						<button class="navbar-toggler collapsed menuicon justify-content-start  align-m" type="button"
@@ -218,13 +218,13 @@
 						<div class="menu-links navbar-collapse collapse justify-content-star" id="menuDropdown"
 							style="text-align: right;">
 							<div class="menu-logo">
-								<a href="index.html"><img src="../assets/images/logo-ar-black.png" alt=""></a>
+								<a href="index.php"><img src="../assets/images/logo-ar-black.png" alt=""></a>
 							</div>
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">الصفحة الرئيسية </a></li>
-								<li class="active"><a href="courses.html">الدورات</a></li>
-								<li><a href="get-certified.html">الحصول على الشهادة</a></li>
-								<li><a href="contact.html">التواصل معنا </a></li>
+								<li><a href="index.php">الصفحة الرئيسية </a></li>
+								<li class="active"><a href="courses.php">الدورات</a></li>
+								<li><a href="get-certified.php">الحصول على الشهادة</a></li>
+								<li><a href="contact.php">التواصل معنا </a></li>
 							</ul>
 							<div class="nav-social-link">
 								<a href="javascript:;"><i class="fa fa-facebook"></i></a>
@@ -252,7 +252,7 @@
 				<div class="breadcrumb-row">
 					<div class="container">
 						<ul class="list-inline">
-							<li><a href="index.html">الصفحة الرئيسية</a></li>
+							<li><a href="index.php">الصفحة الرئيسية</a></li>
 							<li>الدورات</li>
 						</ul>
 					</div>
@@ -294,7 +294,7 @@
 										<div class="cours-bx">
 											<div class="action-box">
 												<img src="../assets/images/courses/pic1.jpg" alt="">
-												<a href="courses-details.html" class="btn">التسجيل</a>
+												<a href="courses-details.php" class="btn">التسجيل</a>
 											</div>
 											<div class="info-bx text-center">
 												<h5><a href="#">Design</a></h5>
@@ -518,7 +518,7 @@
 					<div class="container">
 						<div class="d-flex align-items-stretch">
 							<div class="pt-logo">
-								<a href="index.html"><img src="../assets/images/logo-ar.png" alt="" width="290"
+								<a href="index.php"><img src="../assets/images/logo-ar.png" alt="" width="290"
 										height="110" /></a>
 							</div>
 							<div class="pt-social-link  mr-auto">

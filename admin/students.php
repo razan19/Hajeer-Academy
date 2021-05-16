@@ -1,7 +1,17 @@
+<?php
+
+	session_start();
+	include('../config.php');
+	include('../functions.php');
+
+	$admin_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from educhamp.themetrades.com/demo/admin/add-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:09:05 GMT -->
+<!-- Mirrored from educhamp.themetrades.com/demo/admin/add-listing.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:09:05 GMT -->
 
 <head>
 
@@ -9,7 +19,6 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    
     <!-- META ============================================= -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +32,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.png" />
 
     <!-- PAGE TITLE HERE ============================================= -->
-    <title>Add Category</title>
+    <title>Students </title>
 
     <!-- MOBILE SPECIFIC ============================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,7 +57,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
     <link class="skin" rel="stylesheet" type="text/css" href="assets/css/color/color-1.css">
 
-    
+    <style>
+        .file {
+            visibility: hidden;
+            position: absolute;
+        }
+    </style>
 
 </head>
 
@@ -66,7 +80,7 @@
             <!--logo start -->
             <div class="ttr-logo-box">
                 <div>
-                    <a href="index.html" class="ttr-logo">
+                    <a href="index.php" class="ttr-logo">
                         <img class="ttr-logo-mobile" alt="" src="../assets/images/logo-white.png" width="160"
                             height="160">
                         <img class="ttr-logo-desktop" alt="" src="../assets/images/logo-white.png" width="160"
@@ -79,7 +93,7 @@
                 <!-- header left menu start -->
                 <ul class="ttr-header-navigation">
                     <li>
-                        <a href="../en/index.html" class="ttr-material-button ttr-submenu-toggle">HOME</a>
+                        <a href="../en/index.php" class="ttr-material-button ttr-submenu-toggle">HOME</a>
                     </li>
                 </ul>
                 <!-- header left menu end -->
@@ -94,13 +108,13 @@
             <nav class="ttr-sidebar-navi">
                 <ul>
                     <li>
-                        <a href="dashboard.html" class="ttr-material-button">
+                        <a href="dashboard.php" class="ttr-material-button">
                             <span class="ttr-icon"><i class="ti-home"></i></span>
                             <span class="ttr-label">Dashborad</span>
                         </a>
                     </li>
                     <li>
-                        <a href="categories.html" class="ttr-material-button">
+                        <a href="categories.php" class="ttr-material-button">
                             <span class="ttr-icon"><i class="ti-list"></i></span>
                             <span class="ttr-label">Categories</span>
                         </a>
@@ -113,22 +127,28 @@
                         </a>
                         <ul>
                             <li>
-                                <a href="add-course.html" class="ttr-material-button"><span class="ttr-label">Add
+                                <a href="add-course.php" class="ttr-material-button"><span class="ttr-label">Add
                                         Course</span></a>
                             </li>
                             <li>
-                                <a href="mng-course.html" class="ttr-material-button"><span class="ttr-label">Manage
+                                <a href="mng-course.php" class="ttr-material-button"><span class="ttr-label">Manage
                                         Courses</span></a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="students.html" class="ttr-material-button">
+                        <a href="students.php" class="ttr-material-button">
                             <span class="ttr-icon"><i class="ti-user"></i></span>
                             <span class="ttr-label">Students</span>
                         </a>
                     </li>
                     <li class="ttr-seperate"></li>
+                    <li>
+						<a href="logout.php" class="ttr-material-button">
+							<span class="ttr-icon"><i class="fa fa-sign-out"></i></span>
+							<span class="ttr-label">Logout</span>
+						</a>
+					</li>
                 </ul>
                 <!-- sidebar menu end -->
             </nav>
@@ -141,59 +161,88 @@
     <main class="ttr-wrapper">
         <div class="container-fluid">
             <div class="db-breadcrumb">
-                <h4 class="breadcrumb-title">Categories</h4>
+                <h4 class="breadcrumb-title">Students</h4>
             </div>
-            <div class="row">
-                <div class="col-lg-12 m-b30">
-                    <div class="widget-box">
-                        <div class="wc-title">
-                            <h4>Add New Category</h4>
+            <!--Popup-->
+            <div class="modal fade" id="uploadCertificate" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Certificate</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="widget-inner">
-                            <form class="edit-profile m-b10">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <table id="item-add" style="width:100%;">
-                                            <tr class="list-item">
-                                                <td>
-                                                    <div class="row">
-                                                        <label class="col-form-label m-a10">Course Name</label>
-                                                        <div class="col-lg-4 col-sm-12 m-a10">
-                                                            <input class="form-control" type="text" value="">
-                                                        </div>
-                                                        <div class="col-lg-3 col-sm-12 m-a10">
-                                                            <button type="button" class="btn-secondry form-control"><i
-                                                                    class="fa fa-fw fa-plus-circle"></i>Add
-                                                                Category</button>
-                                                        </div>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <h5 class="text-center">Razan Mhmd</h5>
+                                <div class="col-12 border p-4">
+                                    <form method="post" id="image-form">
+                                        <input type="file" name="img[]" class="file" accept="image/*">
+                                        <div class="input-group my-3 browse">
+                                            <input type="text" class="form-control" disabled
+                                                placeholder="Upload Certificate" id="file">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-dark">Browse</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" name="upload" value="upload" id="upload"
+                                                class="btn btn-block btn-dark"><i class="fa fa-fw fa-upload"></i>
+                                                Upload</button>
+                                        </div>
+                                    </form>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="col-12">
+                                <img src="" id="preview" class="img-thumbnail" height="150px">
+                            </div>
+                            <!-- <div class="container">
+                                <h1 class="text-center">Razan Mhmd</h1>
+                                <div class="col-12 border p-4">
+                                    <form method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label><strong>Upload Certificate</strong></label>
+                                            <div class="custom-file">
+                                                <input type="file" name="files[]" multiple
+                                                    class="custom-file-input form-control" id="customFile">
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" name="upload" value="upload" id="upload"
+                                                class="btn btn-block btn-dark"><i class="fa fa-fw fa-upload"></i>
+                                                Upload</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> -->
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <!--End popup-->
+            <div class="row">
                 <div class="col-12  m-b30">
                     <div class="widget-box">
                         <div class="wc-title">
-                            <h4>All Categories</h4>
+                            <h4>All Students</h4>
                         </div>
                         <div class="widget-inner">
                             <div class="row">
                                 <div class="col-12 m-b10">
-                                    <input type="text" id="category" onkeyup="myFunction()" class="form-control"
-                                        placeholder="Search Category">
+                                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control"
+                                        placeholder="Search Students">
                                     <script>
                                         $(document).ready(function () {
-                                            $("#category").on("keyup", function () {
+                                            $("#myInput").on("keyup", function () {
                                                 var value = $(this).val().toLowerCase();
-                                                $("#tCategory tr").filter(function () {
+                                                $("tbody tr").filter(function () {
                                                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                                                 });
                                             });
@@ -205,47 +254,96 @@
                                         cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>Category Name</th>
+                                                <th>#ID</th>
+                                                <th>Full Name</th>
+                                                <th>Phone</th>
+                                                <th>Course</th>
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="tCategory">
+                                        <tbody>
                                             <tr>
                                                 <td>Tiger</td>
+                                                <td>Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
                                                 <td>
                                                     <span class="orders-btn">
-                                                        <a href="#" class="btn button-sm red"
-                                                            style="font-size: small;">Delete
+                                                        <a href="#" class="btn button-sm green"
+                                                            style="font-size: small;">complete
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="orders-btn">
+                                                        <a href="#" class="btn button-sm orange"
+                                                            style="font-size: small;" data-toggle="modal"
+                                                            data-target="#uploadCertificate">Upload Certificate <i
+                                                                class="fa fa-upload"></i>
                                                         </a>
                                                     </span>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Garrett</td>
+                                                <td>Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
                                                 <td>
                                                     <span class="orders-btn">
-                                                        <a href="#" class="btn button-sm red"
-                                                            style="font-size: small;">Delete
+                                                        <a href="#" class="btn button-sm green"
+                                                            style="font-size: small;">complete
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="orders-btn">
+                                                        <a href="#" class="btn button-sm orange"
+                                                            style="font-size: small;">Upload Certificate <i
+                                                                class="fa fa-upload"></i>
                                                         </a>
                                                     </span>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>Ashton</td>
+                                                <td>Cox</td>
+                                                <td>Junior Technical Author</td>
                                                 <td>San Francisco</td>
                                                 <td>
                                                     <span class="orders-btn">
-                                                        <a href="#" class="btn button-sm red"
-                                                            style="font-size: small;">Delete
+                                                        <a href="#" class="btn button-sm green"
+                                                            style="font-size: small;">complete
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="orders-btn">
+                                                        <a href="#" class="btn button-sm orange"
+                                                            style="font-size: small;">Upload Certificate <i
+                                                                class="fa fa-upload"></i>
                                                         </a>
                                                     </span>
                                                 </td>
                                             </tr>
                                             <tr>
+                                                <td>Brielle</td>
+                                                <td>Williamson</td>
+                                                <td>Integration Specialist</td>
                                                 <td>New York</td>
                                                 <td>
                                                     <span class="orders-btn">
                                                         <a href="#" class="btn button-sm red"
-                                                            style="font-size: small;">Delete
+                                                            style="font-size: small;">incomplete
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span class="orders-btn">
+                                                        <a href="#" class="btn button-sm orange"
+                                                            style="font-size: small;">Upload Certificate <i
+                                                                class="fa fa-upload"></i>
                                                         </a>
                                                     </span>
                                                 </td>
@@ -298,8 +396,26 @@
             });
         }
     </script>
+    <script>
+        $(document).on("click", ".browse", function () {
+            var file = $(this).parents().find(".file");
+            file.trigger("click");
+        });
+        $('input[type="file"]').change(function (e) {
+            var fileName = e.target.files[0].name;
+            $("#file").val(fileName);
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("preview").src = e.target.result;
+            };
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+        });
+    </script>
 </body>
 
-<!-- Mirrored from educhamp.themetrades.com/demo/admin/add-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:09:05 GMT -->
+<!-- Mirrored from educhamp.themetrades.com/demo/admin/add-listing.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:09:05 GMT -->
 
 </html>

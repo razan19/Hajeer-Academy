@@ -25,8 +25,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.png" />
 
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>Certified</title>
-
+	<title>Contact US </title>
 
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,6 +53,7 @@
 <body id="bg">
 	<div class="page-wraper">
 		<div id="loading-icon-bx"></div>
+
 		<!-- Header Top ==== -->
 		<header class="header rs-nav header-transparent">
 			<div class="top-bar">
@@ -61,17 +61,15 @@
 					<div class="row d-flex justify-content-between">
 						<div class="topbar-left">
 							<ul>
-								<li><a href="faq-1.html"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
+								<li><a href="contact.php"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
 								<li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
 							</ul>
 						</div>
 						<div class="topbar-right">
 							<ul>
-								<li class="header-lang-bx"><a href="../ar/get-certified.html"><i
-											class="flag flag-uk"></i>
-										العربية</a></li>
-								<li><a href="login.html">Login</a></li>
-								<li><a href="register.html">Register</a></li>
+								<li class="header-lang-bx"><a href="../ar/contact.php"><i class="flag flag-uk"></i> العربية</a></li>
+								<li><a href="login.php">Login</a></li>
+								<li><a href="login.php">Register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -82,7 +80,7 @@
 					<div class="container clearfix">
 						<!-- Header Logo ==== -->
 						<div class="menu-logo">
-							<a href="index.html"><img src="../assets/images/logo-white.png" alt=""></a>
+							<a href="index.php"><img src="../assets/images/logo-white.png" alt=""></a>
 						</div>
 						<!-- Mobile Nav Button ==== -->
 						<button class="navbar-toggler collapsed menuicon justify-content-end" type="button"
@@ -118,13 +116,13 @@
 						<!-- Navigation Menu ==== -->
 						<div class="menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
 							<div class="menu-logo">
-								<a href="index.html"><img src="../assets/images/logo-black.png" alt=""></a>
+								<a href="index.php"><img src="../assets/images/logo-black.png" alt=""></a>
 							</div>
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home </a></li>
-								<li><a href="courses.html">Courses </a></li>
-								<li class="active"><a href="get-certified.html">Get Certified</a></li>
-								<li><a href="contact.html">Contact US </a></li>
+								<li><a href="index.php">Home </a></li>
+								<li><a href="courses.php">Courses </a></li>
+								<li><a href="get-certified.php">Get Certified</a></li>
+								<li class="active"><a href="contact.php">Contact US </a></li>
 							</ul>
 							<div class="nav-social-link">
 								<a href="javascript:;"><i class="fa fa-facebook"></i></a>
@@ -141,10 +139,10 @@
 		<!-- Content -->
 		<div class="page-content bg-white">
 			<!-- inner page banner -->
-			<div class="page-banner ovbl-dark" style="background-image:url(../assets/images/banner/banner2.jpg);">
+			<div class="page-banner ovbl-dark" style="background-image:url(..//assets/images/banner/banner2.jpg);">
 				<div class="container">
 					<div class="page-banner-entry">
-						<h1 class="text-white">Get Certified</h1>
+						<h1 class="text-white">Contact Us</h1>
 					</div>
 				</div>
 			</div>
@@ -152,52 +150,95 @@
 			<div class="breadcrumb-row">
 				<div class="container">
 					<ul class="list-inline">
-						<li><a href="index.html">Home</a></li>
-						<li>Get Certified</li>
+						<li><a href="index.php">Home</a></li>
+						<li>Contact Us</li>
 					</ul>
 				</div>
 			</div>
 			<!-- Breadcrumb row END -->
-			<!-- inner page banner END -->
-			<div class="content-block">
-				<!-- About Us -->
-				<div class="section-area section-sp4">
-					<div class="container">
-						<div class="row">
-							<form class="col-12">
-								<div class="row" style="justify-content: center;">
-									<div class="form-group form-inline p-a0" style="justify-content: center;">
-										<label class="col-form-label">Registration Number</label>
-										<div>
-											<input class="form-control m-a10" style=" width:300px" placeholder="Enter Your Registration Number" type="name" value="">
-										</div>
-									
-								
-									<div class="course-buy-now">
-										<button type="button" class="btn radius-xl text-uppercase m-a10">Enter</button>
-									</div>
+
+			<!-- inner page banner -->
+			<div class="page-banner contact-page">
+				<div class="container-fuild">
+					<div class="row m-lr0">
+						<div class="col-lg-6 col-md-6 p-lr0 d-flex">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d57850.2966853963!2d35.89216971391165!3d32.54378571425003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d32.5485044!2d35.8597156!5e0!3m2!1sar!2sjo!4v1620612208094!5m2!1sar!2sjo" class="align-self-stretch d-flex" style=" width:100%; min-height:300px; height: 100%;" allowfullscreen="" loading="lazy"></iframe>
+							<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.1298878182047!2d-81.38369578541523!3d30.204840081824198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e437ac927a996b%3A0x799695b1a2b970ab!2sNona+Blue+Modern+Tavern!5e0!3m2!1sen!2sin!4v1548177305546" class="align-self-stretch d-flex" style="width:100%; width:100%; min-height: 300px;" allowfullscreen></iframe> -->
+						</div>
+						<div class="col-lg-6 col-md-6 section-sp2 p-lr30">
+							<form class="contact-bx ajax-form"
+								action="http://educhamp.themetrades.com/demo/assets/script/contact.php">
+								<div class="ajax-message"></div>
+								<div class="heading-bx left p-r15">
+									<h2 class="title-head">Get In <span>Touch</span></h2>
 								</div>
+								<div class="row placeani">
+									<div class="col-lg-6 ">
+										<div class="form-group">
+											<div class="input-group">
+												<label>Your Name</label>
+												<input name="name" type="text" required
+													class="form-control valid-character">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<div class="input-group">
+												<label>Your Email Address</label>
+												<input name="email" type="email" class="form-control" required>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<div class="input-group">
+												<label>Your Phone</label>
+												<input name="phone" type="text" required class="form-control int-value">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<div class="input-group">
+												<label>Subject</label>
+												<input name="subject" type="text" required class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form-group">
+											<div class="input-group">
+												<label>Type Message</label>
+												<textarea name="message" rows="4" class="form-control"
+													required></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form-group">
+											<div class="input-group">
+												<div class="g-recaptcha"
+													data-sitekey="6Lf2gYwUAAAAAJLxwnZTvpJqbYFWqVyzE-8BWhVe"
+													data-callback="verifyRecaptchaCallback"
+													data-expired-callback="expiredRecaptchaCallback"></div>
+												<input class="form-control d-none" style="display:none;"
+													data-recaptcha="true" required
+													data-error="Please complete the Captcha">
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<button name="submit" type="submit" value="Submit" class="btn button-md"> Send
+											Message</button>
+									</div>
 								</div>
 							</form>
 						</div>
-						<div class="row d-flex flex-row">
-							<div class="col-12">
-								<div class="courses-post">
-									<div class="ttr-post-media media-effect">
-										<a href="#"><img src="../assets/images/certificate.jpg" alt=""></a>
-									</div>
-								</div>
-							</div>
-							<div class="course-buy-now col-12 m-t20 m-p20">
-								<button type="button" class="btn radius-xl text-uppercase" style="width: 100%;">Download certificataion <i class="fa fa-download"></i></button>
-							</div>
-						</div>
 					</div>
 				</div>
-				</div>
 			</div>
-			<!-- contact area END -->
-
+			<!-- inner page banner END -->
 		</div>
 		<!-- Content END-->
 		<!-- Footer ==== -->
@@ -207,8 +248,7 @@
 					<div class="container">
 						<div class="d-flex align-items-stretch">
 							<div class="pt-logo mr-auto">
-								<a href="index.html"><img src="../assets/images/logo-white.png" alt="" width="290"
-										height="110" /></a>
+								<a href="index.php"><img src="../assets/images/logo-white.png" alt="" width="290" height="110"/></a>
 							</div>
 							<div class="pt-social-link">
 								<ul class="list-inline m-a0">
@@ -243,6 +283,7 @@
 			</div>
 		</footer>
 		<!-- Footer END ==== -->
+		<!-- scroll top button -->
 		<button class="back-to-top fa fa-chevron-up"></button>
 	</div>
 	<!-- External JavaScripts -->
@@ -258,9 +299,10 @@
 	<script src="../assets/vendors/masonry/masonry.js"></script>
 	<script src="../assets/vendors/masonry/filter.js"></script>
 	<script src="../assets/vendors/owl-carousel/owl.carousel.js"></script>
-	<script src="../assets/js/jquery.scroller.js"></script>
 	<script src="../assets/js/functions.js"></script>
 	<script src="../assets/js/contact.js"></script>
+	<script src='assets/vendors/switcher/switcher.js'></script>
+	<script src='../../www.google.com/recaptcha/api.js'></script>
 </body>
 
 </html>

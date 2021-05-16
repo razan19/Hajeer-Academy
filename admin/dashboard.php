@@ -1,10 +1,24 @@
+<?php
+
+	session_start();
+	include('../config.php');
+	include('../functions.php');
+
+	$admin_data = check_login($con);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from educhamp.themetrades.com/demo/admin/add-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:09:05 GMT -->
 
 <head>
 
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
 	<!-- META ============================================= -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +32,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.png" />
 
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>Manage Courses </title>
+	<title>Dashboard </title>
 
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,6 +57,9 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
 	<link class="skin" rel="stylesheet" type="text/css" href="assets/css/color/color-1.css">
 
+	
+
+
 </head>
 
 <body class="ttr-opened-sidebar ttr-pinned-sidebar">
@@ -59,7 +76,7 @@
 			<!--logo start -->
 			<div class="ttr-logo-box">
 				<div>
-					<a href="index.html" class="ttr-logo">
+					<a href="index.php" class="ttr-logo">
 						<img class="ttr-logo-mobile" alt="" src="../assets/images/logo-white.png" width="160"
 							height="160">
 						<img class="ttr-logo-desktop" alt="" src="../assets/images/logo-white.png" width="160"
@@ -72,7 +89,7 @@
 				<!-- header left menu start -->
 				<ul class="ttr-header-navigation">
 					<li>
-						<a href="../en/index.html" class="ttr-material-button ttr-submenu-toggle">HOME</a>
+						<a href="../en/index.php" class="ttr-material-button ttr-submenu-toggle">HOME</a>
 					</li>
 				</ul>
 				<!-- header left menu end -->
@@ -87,13 +104,13 @@
 			<nav class="ttr-sidebar-navi">
 				<ul>
 					<li>
-						<a href="dashboard.html" class="ttr-material-button">
+						<a href="dashboard.php" class="ttr-material-button">
 							<span class="ttr-icon"><i class="ti-home"></i></span>
 							<span class="ttr-label">Dashborad</span>
 						</a>
 					</li>
 					<li>
-                        <a href="categories.html" class="ttr-material-button">
+                        <a href="categories.php" class="ttr-material-button">
                             <span class="ttr-icon"><i class="ti-list"></i></span>
                             <span class="ttr-label">Categories</span>
                         </a>
@@ -106,22 +123,28 @@
 						</a>
 						<ul>
 							<li>
-								<a href="add-course.html" class="ttr-material-button"><span class="ttr-label">Add
+								<a href="add-course.php" class="ttr-material-button"><span class="ttr-label">Add
 										Course</span></a>
 							</li>
 							<li>
-								<a href="mng-course.html" class="ttr-material-button"><span class="ttr-label">Manage
+								<a href="mng-course.php" class="ttr-material-button"><span class="ttr-label">Manage
 										Courses</span></a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="students.html" class="ttr-material-button">
+						<a href="students.php" class="ttr-material-button">
 							<span class="ttr-icon"><i class="ti-user"></i></span>
 							<span class="ttr-label">Students</span>
 						</a>
 					</li>
 					<li class="ttr-seperate"></li>
+					<li>
+						<a href="logout.php" class="ttr-material-button">
+							<span class="ttr-icon"><i class="fa fa-sign-out"></i></span>
+							<span class="ttr-label">Logout</span>
+						</a>
+					</li>
 				</ul>
 				<!-- sidebar menu end -->
 			</nav>
@@ -134,117 +157,104 @@
 	<main class="ttr-wrapper">
 		<div class="container-fluid">
 			<div class="db-breadcrumb">
-				<h4 class="breadcrumb-title">Courses</h4>
+				<h4 class="breadcrumb-title">Dashboard</h4>
 			</div>
 			<div class="row">
-				<!-- Your Profile Views Chart -->
-				<div class="col-lg-12 m-b30">
+				<div class="col-12  m-b30">
 					<div class="widget-box">
 						<div class="wc-title">
-							<h4>Add New Course</h4>
+							<h4>New Students</h4>
 						</div>
 						<div class="widget-inner">
-							<form class="edit-profile m-b30">
-								<div class="row">
-									<div class="col-12">
-										<div class="ml-auto">
-											<h3>1. Basic info</h3>
-										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Course title</label>
-										<div>
-											<input class="form-control" type="text" value="">
-										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Course title</label>
-										<div>
-											<input class="form-control" type="text" value="">
-										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Course start</label>
-										<div>
-											<input class="form-control" type="text" value="">
-										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Course expire</label>
-										<div>
-											<input class="form-control" type="text" value="">
-										</div>
-									</div>
-									<div class="form-group col-6">
-										<label class="col-form-label">Teacher name</label>
-										<div>
-											<input class="form-control" type="text" value="">
-										</div>
-									</div>
-									<div class="seperator"></div>
-
-									<div class="col-12 m-t20">
-										<div class="ml-auto m-b5">
-											<h3>2. Description</h3>
-										</div>
-									</div>
-									<div class="form-group col-12">
-										<label class="col-form-label">Course description</label>
-										<div>
-											<textarea class="form-control"> </textarea>
-										</div>
-									</div>
-									<div class="col-12 m-t20">
-										<div class="ml-auto">
-											<h3 class="m-form__section">3. Add Item</h3>
-										</div>
-									</div>
-									<div class="col-12">
-										<table id="item-add" style="width:100%;">
-											<tr class="list-item">
+							<div class="row">
+								<div class="col-12 m-b10">
+									<input type="text" id="myInput" onkeyup="myFunction()" class="form-control"
+										placeholder="Search Students">
+									<script>
+										$(document).ready(function () {
+											$("#myInput").on("keyup", function () {
+												var value = $(this).val().toLowerCase();
+												$("tbody tr").filter(function () {
+													$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+												});
+											});
+										});
+									</script>
+								</div>
+								<div class="table-responsive col-12">
+									<table id="newStdTable" class="table table-striped table-bordered table-sm "
+										cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th>#ID</th>
+												<th>Full Name</th>
+												<th>Phone</th>
+												<th>Birthday</th>
+												<th>Course</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Tiger</td>
+												<td>Nixon</td>
+												<td>System Architect</td>
+												<td>Edinburgh</td>
+												<td>61</td>
 												<td>
-													<div class="row">
-														<div class="col-md-4">
-															<label class="col-form-label">Course Name</label>
-															<div>
-																<input class="form-control" type="text" value="">
-															</div>
-														</div>
-														<div class="col-md-3">
-															<label class="col-form-label">Course Category</label>
-															<div>
-																<input class="form-control" type="text" value="">
-															</div>
-														</div>
-														<div class="col-md-3">
-															<label class="col-form-label">Course Category</label>
-															<div>
-																<input class="form-control" type="text" value="">
-															</div>
-														</div>
-														<div class="col-md-2">
-															<label class="col-form-label">Close</label>
-															<div class="form-group">
-																<a class="delete" href="#"><i
-																		class="fa fa-close"></i></a>
-															</div>
-														</div>
-													</div>
+													<span class="orders-btn">
+														<a href="#" class="btn button-sm green"
+														style="font-size: small;">Accept</a>
+													</span>
 												</td>
 											</tr>
-										</table>
-									</div>
-									<div class="col-12">
-										<button type="button" class="btn-secondry add-item m-r5"><i
-												class="fa fa-fw fa-plus-circle"></i>Add Item</button>
-										<button type="reset" class="btn">Save changes</button>
-									</div>
+											<tr>
+												<td>Garrett</td>
+												<td>Winters</td>
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>63</td>
+												<td>
+													<span class="orders-btn">
+														<a href="#" class="btn button-sm green"
+														style="font-size: small;">Accept</a>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>Ashton</td>
+												<td>Cox</td>
+												<td>Junior Technical Author</td>
+												<td>San Francisco</td>
+												<td>66</td>
+												<td>
+													<span class="orders-btn">
+														<a href="#" class="btn button-sm green"
+														style="font-size: small;">Accept</a>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<td>Brielle</td>
+												<td>Williamson</td>
+												<td>Integration Specialist</td>
+												<td>New York</td>
+												<td>61</td>
+												<td>
+													<span class="orders-btn">
+														<a href="#" class="btn button-sm green"
+														style="font-size: small;">Accept</a>
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-							</form>
+							</div>
+
 						</div>
 					</div>
 				</div>
-				<!-- Your Profile Views Chart END-->
 			</div>
 		</div>
 	</main>
@@ -287,6 +297,5 @@
 	</script>
 </body>
 
-<!-- Mirrored from educhamp.themetrades.com/demo/admin/add-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Feb 2019 13:09:05 GMT -->
 
 </html>

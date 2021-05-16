@@ -71,16 +71,16 @@
 					<div class="row d-flex justify-content-between">
 						<div class="topbar-left">
 							<ul>
-								<li><a href="faq-1.html"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
+								<li><a href="contact.php"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
 								<li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
 							</ul>
 						</div>
 						<div class="topbar-right">
 							<ul>
-								<li class="header-lang-bx"><a href="../ar/courses.html"><i class="flag flag-uk"></i>
+								<li class="header-lang-bx"><a href="../ar/courses.php"><i class="flag flag-uk"></i>
 										العربية</a></li>
-								<li><a href="login.html">Login</a></li>
-								<li><a href="register.html">Register</a></li>
+								<li><a href="login.php">Login</a></li>
+								<li><a href="login.php">Register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -91,7 +91,7 @@
 					<div class="container clearfix">
 						<!-- Header Logo ==== -->
 						<div class="menu-logo">
-							<a href="index.html"><img src="../assets/images/logo-white.png" alt=""></a>
+							<a href="index.php"><img src="../assets/images/logo-white.png" alt=""></a>
 						</div>
 						<!-- Mobile Nav Button ==== -->
 						<button class="navbar-toggler collapsed menuicon justify-content-end" type="button"
@@ -127,13 +127,13 @@
 						<!-- Navigation Menu ==== -->
 						<div class="menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
 							<div class="menu-logo">
-								<a href="index.html"><img src="../assets/images/logo-black.png" alt=""></a>
+								<a href="index.php"><img src="../assets/images/logo-black.png" alt=""></a>
 							</div>
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">Home </a></li>
-								<li class="active"><a href="courses.html">Courses </a></li>
-								<li><a href="get-certified.html">Get Certified</a></li>
-								<li><a href="contact.html">Contact US </a></li>
+								<li><a href="index.php">Home </a></li>
+								<li class="active"><a href="courses.php">Courses </a></li>
+								<li><a href="get-certified.php">Get Certified</a></li>
+								<li><a href="contact.php">Contact US </a></li>
 							</ul>
 							<div class="nav-social-link">
 								<a href="javascript:;"><i class="fa fa-facebook"></i></a>
@@ -161,7 +161,7 @@
 			<div class="breadcrumb-row">
 				<div class="container">
 					<ul class="list-inline">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="index.php">Home</a></li>
 						<li>Our Courses</li>
 					</ul>
 				</div>
@@ -202,10 +202,10 @@
 										<div class="cours-bx">
 											<div class="action-box">
 												<img src="../assets/images/courses/pic2.jpg" alt="">
-												<a href="courses-details.html" class="btn">Register</a>
+												<a href="courses-details.php" class="btn">Register</a>
 											</div>
 											<div class="info-bx text-center">
-												<h5><a href="courses-details.html">Flutter</a></h5>
+												<h5><a href="courses-details.php">Flutter</a></h5>
 												<span>Programming</span>
 											</div>
 											<div class="cours-more-info">
@@ -317,7 +317,7 @@
 					<div class="container">
 						<div class="d-flex align-items-stretch">
 							<div class="pt-logo mr-auto">
-								<a href="index.html"><img src="../assets/images/logo-white.png" alt="" width="290" height="110"/></a>
+								<a href="index.php"><img src="../assets/images/logo-white.png" alt="" width="290" height="110"/></a>
 							</div>
 							<div class="pt-social-link">
 								<ul class="list-inline m-a0">

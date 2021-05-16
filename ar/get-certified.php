@@ -25,7 +25,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.png" />
 
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>Course Details</title>
+	<title>Certified</title>
 
 
 	<!-- MOBILE SPECIFIC ============================================= -->
@@ -166,14 +166,14 @@
 						<div class="topbar-left" dir="ltr">
 							<ul>
 								<li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
-								<li><a href="faq-1.html"><i class="fa fa-question-circle"></i>إسألنا </a></li>
+								<li><a href="contact.php"><i class="fa fa-question-circle"></i>إسألنا </a></li>
 							</ul>
 						</div>
 						<div class="topbar-right" dir="ltr">
 							<ul>
-								<li><a href="login.html">الدخول</a></li>
-								<li><a href="register.html">تسجيل</a></li>
-								<li><a href="../en/courses-details.html" class="header-lang-bx-ar">
+								<li><a href="../en/login.php">الدخول</a></li>
+								<li><a href="../en/login.php">تسجيل</a></li>
+								<li><a href="../en/get-certified.php" class="header-lang-bx-ar">
 										English<i class="flag flag-us"></i></a></li>
 							</ul>
 						</div>
@@ -186,7 +186,7 @@
 					<div class="container clearfix  align-m" dir="rtl">
 						<!-- Header Logo ==== -->
 						<div class="menu-logo-ar ">
-							<a href="index.html"><img src="../assets/images/logo-ar.png" alt=""></a>
+							<a href="index.php"><img src="../assets/images/logo-ar.png" alt=""></a>
 						</div>
 						<!-- Mobile Nav Button ==== -->
 						<button class="navbar-toggler collapsed menuicon justify-content-start  align-m" type="button"
@@ -223,13 +223,13 @@
 						<div class="menu-links navbar-collapse collapse justify-content-star" id="menuDropdown"
 							style="text-align: right;">
 							<div class="menu-logo">
-								<a href="index.html"><img src="../assets/images/logo-ar-black.png" alt=""></a>
+								<a href="index.php"><img src="../assets/images/logo-ar-black.png" alt=""></a>
 							</div>
 							<ul class="nav navbar-nav">
-								<li><a href="index.html">الصفحة الرئيسية </a></li>
-								<li class="active"><a href="courses.html">الدورات</a></li>
-								<li><a href="get-certified.html">الحصول على الشهادة</a></li>
-								<li><a href="contact.html">التواصل معنا </a></li>
+								<li><a href="index.php">الصفحة الرئيسية </a></li>
+								<li><a href="courses.php">الدورات</a></li>
+								<li class="active"><a href="get-certified.php">الحصول على الشهادة</a></li>
+								<li><a href="contact.php">التواصل معنا </a></li>
 							</ul>
 							<div class="nav-social-link">
 								<a href="javascript:;"><i class="fa fa-facebook"></i></a>
@@ -250,7 +250,8 @@
 			<div class="page-banner ovbl-dark" style="background-image:url(../assets/images/banner/banner2.jpg);">
 				<div class="container">
 					<div class="page-banner-entry">
-						<h1 class="text-white">تفاصيل الدورة</h1>
+						<h1 class="text-white">الحصول على الشهادة
+						</h1>
 					</div>
 				</div>
 			</div>
@@ -258,190 +259,101 @@
 			<div class="breadcrumb-row" dir="rtl" style="text-align: right;">
 				<div class="container">
 					<ul class="list-inline">
-						<li><a href="index.html">الصفحة الرئيسية</a></li>
-						<li><a href="courses.html">الدورات</a></li>
-						<li>تفاصيل الدورة</li>
+						<li><a href="index.php">الصفحة الرئيسية</a></li>
+						<li>الحصول على الشهادة</li>
 					</ul>
 				</div>
 			</div>
 			<!-- Breadcrumb row END -->
 			<!-- inner page banner END -->
-			<div class="content-block">
+			<div class="content-block" dir="rtl" style="text-align: right;">
 				<!-- About Us -->
 				<div class="section-area section-sp4">
-					<div class="container" dir="rtl">
+					<div class="container">
 						<div class="row">
-							<div class="ttr-post-info col-lg-8 col-md-8 col-sm-12">
-								<div class="ttr-post-title ">
-									<h2 class="post-title" style="text-align: right;">تصميم المواقع</h2>
+							<form class="col-12">
+								<div class="row" style="justify-content: center;">
+									<div class="form-group form-inline p-a0" style="justify-content: center;">
+										<label class="col-form-label">رقم التسجيل</label>
+										<div>
+											<input class="form-control m-a10 " style=" width:300px; z-index: 10;"
+												placeholder="ادخل رقم التسجيل" type="name" value="">
+										</div>
+
+
+										<div class="course-buy-now">
+											<button type="button" class="btn radius-xl text-uppercase m-a10"
+												style="width: 200px;">دخول</button>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-12">
-								<div class="course-price">
-									<del>190 د.أ</del>
-									<h2 class="price">120 د.أ</h2>
-								</div>
-							</div>
+							</form>
 						</div>
 						<div class="row d-flex flex-row">
-							<div class="col-lg-8 col-md-8 col-sm-12">
+							<div class="col-12">
 								<div class="courses-post">
 									<div class="ttr-post-media media-effect">
-										<a href="#"><img src="../assets/images/courses/pic1.jpg" alt=""></a>
-									</div>
-								</div>
-								<div class="courese-overview m-t10" style="text-align: right;" id="overview">
-									<div class="row">
-
-										<div class="col-md-12 col-lg-12">
-											<h5 class="m-b5">وصف الدورة</h5>
-											<p>وصف عن الدورة التدريبية</p>
-
-										</div>
-										<div class="col-md-12 col-lg-12">
-											<h5 class="m-b5">المعلومات الأساسية</h5>
-											<ul class="course-features">
-												<li><i class="ti-book"></i> <span class="label">الصنف</span> <span
-														class="value">برمجة</span></li>
-												<li><i class="ti-time"></i> <span class="label">عدد الساعات</span> <span
-														class="value">60 ساعة</span></li>
-												<li><i class="ti-stats-up"></i> <span class="label">المستوى</span>
-													<span class="value">مبتدئ</span>
-												</li>
-												<li><i class="ti-time"></i> <span class="label">أوقات المحاضرات</span>
-													<span class="value">كل أحد من 11:00ص الى 02:00م</span>
-												</li>
-												<li><i class="ti-user"></i> <span class="label">المدرس</span>
-													<span class="value">زران محمد</span>
-												</li>
-												<li><i class="ti-timer"></i> <span class="label" style="color: red;">آخر
-														موعد للتسجيل</span>
-													<span class="value" style="color: red;">27/6/2021</span>
-												</li>
-												<li><i class="ti-alarm-clock"></i> <span class="label"
-														style="color: green;">موعد بدء الدورة</span>
-													<span class="value" style="color: green;">26/8/2021</span>
-												</li>
-
-
-											</ul>
-										</div>
-										<div class="col-md-12 col-lg-12">
-											<h5>المنهاج</h5>
-											<ul class="curriculum-list">
-												<li>
-													<ul>
-														<li>
-															<div class="curriculum-list-box">
-																<span>الجزء الاول: </span> مقدمة في تصميم المواقع
-															</div>
-															<span>10 ساعات</span>
-														</li>
-														<li>
-															<div class="curriculum-list-box">
-																<span>الجز الثاني: </span> اداوات التصميم واستخداماتها
-															</div>
-															<span>30 ساعة</span>
-														</li>
-														<li>
-															<div class="curriculum-list-box">
-																<span></span>الجزء الثالث: </span> تصيم موقع كامل
-															</div>
-															<span>20 ساعة</span>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</div>
-
+										<a href="#"><img src="../assets/images/certificate.jpg" alt=""></a>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-4 col-sm-12 m-b30">
-								<div class="course-detail-bx">
-									<h4 class="m-b15" style="text-align: center;">التسجيل</h4>
-									<div class="widget-inner"  style="text-align: right;">
-										<form class="edit-profile m-b30">
-											<div class="row">
-												<div class="form-group col-12">
-													<label class="col-form-label">الإسم الكامل</label>
-													<div>
-														<input class="form-control" type="name" value="">
-													</div>
-												</div>
-												<div class="form-group col-12">
-													<label class="col-form-label">رقم الهاتف</label>
-													<div>
-														<input class="form-control" type="phone" value="">
-													</div>
-												</div>
-												<div class="form-group col-12">
-													<label class="col-form-label">تاريخ الميلاد</label>
-													<div>
-														<input class="form-control" type="date" value="">
-													</div>
-												</div>
-												<div class="course-buy-now text-center col-12 m-t10 m-b10">
-													<button type="button" class="btn radius-xl text-uppercase"
-														style="width: 100%;">تسجيل</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
+							<div class="course-buy-now col-12 m-t20 m-p20">
+								<button type="button" class="btn radius-xl text-uppercase" style="width: 100%;">تحميل
+									الشهادة<i class="fa fa-download m-r5"></i></button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- contact area END -->
-
 		</div>
-		<!-- Content END-->
-		<!-- Footer ==== -->
-		<footer>
-			<div class="footer-top" dir="rtl">
-				<div class="pt-exebar">
-					<div class="container">
-						<div class="d-flex align-items-stretch">
-							<div class="pt-logo">
-								<a href="index.html"><img src="../assets/images/logo-ar.png" alt="" width="290"
-										height="110" /></a>
-							</div>
-							<div class="pt-social-link  mr-auto">
-								<ul class="list-inline m-a0">
-									<li><a href="#" class="btn-link"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" class="btn-link"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
-									<li><a href="#" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="section-area section-sp4">
-					<div class="container" dir="rtl">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="tp-caption Newspaper-Title   tp-resizeme"
-									style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal; font-size: 4vw; color: white;">
-									انضم لطلابنا السعداء اليوم!
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
+		<!-- contact area END -->
+
+	</div>
+	<!-- Content END-->
+	<!-- Footer ==== -->
+	<footer>
+		<div class="footer-top" dir="rtl">
+			<div class="pt-exebar">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 text-center">Copyright © 2021 Hajeer Academy</div>
+					<div class="d-flex align-items-stretch">
+						<div class="pt-logo">
+							<a href="index.php"><img src="../assets/images/logo-ar.png" alt="" width="290"
+									height="110" /></a>
+						</div>
+						<div class="pt-social-link  mr-auto">
+							<ul class="list-inline m-a0">
+								<li><a href="#" class="btn-link"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="btn-link"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#" class="btn-link"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#" class="btn-link"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</footer>
-		<!-- Footer END ==== -->
-		<button class="back-to-top fa fa-chevron-up"></button>
+			<div class="section-area section-sp4">
+				<div class="container" dir="rtl">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="tp-caption Newspaper-Title   tp-resizeme"
+								style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal; font-size: 4vw; color: white;">
+								انضم لطلابنا السعداء اليوم!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">Copyright © 2021 Hajeer Academy</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer END ==== -->
+	<button class="back-to-top fa fa-chevron-up"></button>
 	</div>
 	<!-- External JavaScripts -->
 	<script src="../assets/js/jquery.min.js"></script>

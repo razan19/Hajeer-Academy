@@ -148,14 +148,14 @@
                         <div class="topbar-left" dir="ltr">
                             <ul>
                                 <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
-                                <li><a href="faq-1.html"><i class="fa fa-question-circle"></i>إسألنا </a></li>
+                                <li><a href="contact.php"><i class="fa fa-question-circle"></i>إسألنا </a></li>
                             </ul>
                         </div>
                         <div class="topbar-right" dir="ltr">
                             <ul>
-                                <li><a href="login.html">الدخول</a></li>
-                                <li><a href="register.html">تسجيل</a></li>
-                                <li><a href="../en/index.html" class="header-lang-bx-ar">
+                                <li><a href="../en/login.php">الدخول</a></li>
+                                <li><a href="../en/login.php">تسجيل</a></li>
+                                <li><a href="../en/index.php" class="header-lang-bx-ar">
                                         English<i class="flag flag-us"></i></a></li>
                             </ul>
                         </div>
@@ -168,7 +168,7 @@
                     <div class="container clearfix  align-m" dir="rtl">
                         <!-- Header Logo ==== -->
                         <div class="menu-logo-ar ">
-                            <a href="index.html"><img src="../assets/images/logo-ar.png" alt=""></a>
+                            <a href="index.php"><img src="../assets/images/logo-ar.png" alt=""></a>
                         </div>
                         <!-- Mobile Nav Button ==== -->
                         <button class="navbar-toggler collapsed menuicon justify-content-start  align-m" type="button"
@@ -205,13 +205,13 @@
                         <div class="menu-links navbar-collapse collapse justify-content-star" id="menuDropdown"
                             style="text-align: right;">
                             <div class="menu-logo">
-                                <a href="index.html"><img src="../assets/images/logo-ar-black.png" alt=""></a>
+                                <a href="index.php"><img src="../assets/images/logo-ar-black.png" alt=""></a>
                             </div>
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="javascript:;">الصفحة الرئيسية </a></li>
-                                <li><a href="courses.html">الدورات</a></li>
-                                <li><a href="get-certified.html">الحصول على الشهادة</a></li>
-                                <li><a href="contact.html">التواصل معنا </a></li>
+                                <li><a href="courses.php">الدورات</a></li>
+                                <li><a href="get-certified.php">الحصول على الشهادة</a></li>
+                                <li><a href="contact.php">التواصل معنا </a></li>
                             </ul>
                             <div class="nav-social-link">
                                 <a href="javascript:;"><i class="fa fa-facebook"></i></a>
@@ -240,7 +240,7 @@
                             <!-- SLIDE  -->
                             <li data-index="rs-100" data-transition="parallaxvertical" data-slotamount="default"
                                 data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
-                                data-easeout="default" data-masterspeed="default" data-thumb="error-404.html"
+                                data-easeout="default" data-masterspeed="default" data-thumb="error-404.php"
                                 data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7"
                                 data-saveperformance="off" data-title="A STUDY ON HAPPINESS" data-param1=""
                                 data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
@@ -523,7 +523,7 @@
                     <div class="container">
                         <div class="d-flex align-items-stretch">
                             <div class="pt-logo">
-                                <a href="index.html"><img src="../assets/images/logo-ar.png" alt="" width="290"
+                                <a href="index.php"><img src="../assets/images/logo-ar.png" alt="" width="290"
                                         height="110" /></a>
                             </div>
                             <div class="pt-social-link  mr-auto">
